@@ -1,0 +1,146 @@
+* {
+    list-style: none;
+}
+
+.rounded-lg {
+    border-radius: 15px;
+}
+
+.shadow-lg {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.p-8 {
+    padding: 2rem;
+}
+
+.w-full {
+    width: 90%;
+    /* padrão para dispositivos pequenos */
+}
+
+.max-w-md {
+    max-width: 400px;
+    /* Limite para dispositivos menores */
+}
+
+/* Elementos criados no JS */
+#todos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#todos li{
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Estilo para a tarefa (task) */
+.task-item {
+    display: flex;              
+    justify-content: space-between; 
+    align-items: center;        
+    margin-bottom: 10px;       
+    padding: 10px;              
+    border: 1px solid #ddd;    
+    border-radius: 5px;         
+    flex-wrap: wrap;            /* Permite que os itens quebrem linha */
+}
+
+.task-item span {
+    flex-grow: 1;               /* Faz o texto ocupar o espaço restante */
+    overflow-wrap: break-word;  /* Permite a quebra de palavras longas */
+    word-wrap: break-word;      /* Permite a quebra de palavras longas */
+    word-break: break-word;     /* Quebra palavras longas, se necessário */
+    max-width: 100%;            /* Impede que o texto ultrapasse o container */
+}
+
+/* Agrupa os botões e os alinha à direita */
+.task-actions {
+    display: flex;              /* Faz os botões ficarem em linha */
+    gap: 8px;                   /* Espaço pequeno entre os botões */
+    justify-content: flex-end;  /* Garante que os botões fiquem à direita */
+    flex-shrink: 0;             /* Impede que os botões encolham */
+}
+
+.task-actions button:nth-child(1) {
+    background-color: #d8edf9;
+    transition: all 0.5s;
+}
+
+.task-actions button:nth-child(1):hover {
+    background-color: #8bcff6;
+}
+
+.task-actions button:nth-child(2) {
+    background-color: #f9d8d8;
+}
+
+.task-actions button:nth-child(2):hover {
+    background-color: #f68b8b;
+}
+
+/* Botões de editar e excluir */
+.task-item button {
+    padding: 5px 10px;          /* Tamanho do botão */
+    border: none;               /* Remove borda padrão */  /* Cor de fundo dos botões */
+    cursor: pointer;           /* Cursor de ponteiro ao passar o mouse */
+    border-radius: 5px;         /* Bordas arredondadas */
+}
+
+/* Para os botões ficarem sempre à direita */
+.task-item {
+    justify-content: space-between; /* Garante que os botões fiquem à direita */
+}
+
+.edit-input {
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 20px;
+}
+
+/* Media query para telas pequenas (mobile) */
+@media screen and (max-width: 600px) {
+    .task-item {
+        flex-direction: column;    /* Alinha os itens em coluna (verticalmente) */
+        align-items: flex-start;   /* Alinha ao início da coluna */
+        text-align: left;          /* Garante que o texto alinhe à esquerda no mobile */
+    }
+
+    .task-item span {
+        margin-bottom: 10px;       /* Adiciona um pequeno espaço entre o texto e os botões */
+        word-wrap: break-word;     /* Quebra as palavras longas */
+    }
+
+    /* Botões no mobile: alinhados à direita */
+    .task-actions {
+        width: 100%;               /* Permite que os botões ocupem toda a largura do container */
+        justify-content: flex-end; /* Alinha os botões à direita */
+    }
+}
+
+/* Media queries para ajustar o tamanho responsivamente */
+@media (min-width: 768px) {
+    .w-full {
+        width: 70%;
+    }
+
+    .max-w-md {
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .w-full {
+        width: 50%;
+    }
+
+    .max-w-md {
+        max-width: 800px;
+    }
+}
