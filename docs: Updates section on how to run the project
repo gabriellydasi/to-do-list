@@ -36,11 +36,11 @@ O código é organizado da seguinte forma:
 Clone este repositório:
 
 ```
-https://github.com/gabriellydasi/maisprati-atividade5.git
+https://github.com/gabriellydasi/to-do-list.git
 ```
 Acesse o diretório do projeto:
 ```
-cd maisprati-atividade5
+cd to-do-list
 ```
 Abra o arquivo `index.html` diretamente no seu navegador ou utilize uma extensão como <b>Live Server</b> no Visual Studio Code.
 
